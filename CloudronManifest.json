@@ -1,0 +1,24 @@
+{
+  "id": "online.sinesys.context7",
+  "title": "Context7 MCP Server",
+  "author": "Upstash / SineSys",
+  "description": "MCP server for Context7 - Documentation context provider for AI coding agents",
+  "tagline": "Up-to-date docs for AI agents via MCP",
+  "version": "2.1.6",
+  "healthCheckPath": "/ping",
+  "httpPort": 8080,
+  "addons": {},
+  "manifestVersion": 2,
+  "website": "https://context7.com",
+  "contactEmail": "jordan.medeiros@sinesys.online",
+  "icon": "",
+  "tags": [
+    "ai",
+    "mcp",
+    "documentation",
+    "developer-tools"
+  ],
+  "mediaLinks": [],
+  "postInstallMessage": "Context7 MCP Server instalado com sucesso! Configure CONTEXT7_API_KEY nas variaveis de ambiente.",
+  "memoryLimit": 256
+}
