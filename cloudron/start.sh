@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 set -eu
 
 echo "=== Context7 MCP Server - Cloudron Entrypoint ==="

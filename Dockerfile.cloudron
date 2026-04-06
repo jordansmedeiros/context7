@@ -27,11 +27,11 @@ RUN pnpm install --frozen-lockfile --prod --filter @upstash/context7-mcp
 # Copy built files from builder
 COPY --from=builder /app/packages/mcp/dist ./packages/mcp/dist
 
-# Copy Cloudron entrypoint
+# Copy Cloudron entrypoint and ensure Unix line endings + executable
 COPY cloudron/start.sh /app/start.sh
-RUN chmod +x /app/start.sh
+RUN sed -i 's/\r$//' /app/start.sh && chmod +x /app/start.sh
 
 WORKDIR /app/packages/mcp
 EXPOSE 8080
 
-CMD ["/app/start.sh"]
+CMD ["/bin/sh", "/app/start.sh"]
